@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf8f4;
+    color: #201c18;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.top {
+    background: #201c18;
+    color: #e8d3b8;
+    text-align: center;
+    padding: 11px;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+header {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    background: #faf8f4;
+    border-bottom: 1px solid #e8e0d6;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    letter-spacing: 5px;
+}
+
+.logo span {
+    display: block;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ad8358;
+}
+
+.header-btn {
+    border: 1px solid #bda17f;
+    padding: 12px 20px;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    background: #201c18;
+    color: white;
+}
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(20,18,15,0.92), rgba(20,18,15,0.15)),
+        url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=90");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 540px;
+}
+
+.small-title {
+    color: #c9a67d;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 6vw, 76px);
+    font-weight: normal;
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+.hero h1 i,
+.about h2 i {
+    color: #d8b894;
+    font-weight: normal;
+}
+
+.description {
+    color: #ddd4c9;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 390px;
+    margin-bottom: 32px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: #d9b894;
+    color: #211b16;
+    padding: 16px 24px;
+    font-size: 11px;
+    transition: 0.3s;
+    border: none;
+}
+
+.main-btn:hover {
+    background: #f0d9bf;
+    transform: translateY(-2px);
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #eee8df;
+    padding: 28px 8%;
+}
+
+.advantages div {
+    text-align: center;
+    border-right: 1px solid #d7ccbd;
+}
+
+.advantages div:last-child {
+    border: none;
+}
+
+.advantages span {
+    color: #a58058;
+    font-size: 25px;
+}
+
+.advantages h3 {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.advantages p {
+    color: #81776b;
+    font-size: 10px;
+}
+
+.catalog {
+    padding: 90px 7%;
+}
+
+.dark {
+    color: #a17c55;
+}
+
+.catalog > .small-title,
+.catalog > h2,
+.catalog > .subtitle {
+    text-align: center;
+}
+
+.catalog > h2,
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 39px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #847b71;
+    font-size: 12px;
+    margin-bottom: 45px;
+}
+
+.category {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 48px 0 22px;
+}
+
+.category span {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #a17c55;
+    margin-left: 12px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: #fffdf9;
+    transition: 0.3s;
+    min-width: 0;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(40, 30, 20, 0.08);
+}
+
+.photo {
+    height: 260px;
+    background: #eae3d9;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.product:hover .photo img {
+    transform: scale(1.05);
+}
+
+.tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #faf3e9;
+    padding: 7px 9px;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.info {
+    padding: 17px 14px;
+}
+
+.brand {
+    color: #a17c55;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.info h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.notes {
+    color: #8c8379;
+    font-size: 10px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.price-row b {
+    font-size: 12px;
+}
+
+.order {
+    border: 1px solid #cbb69c;
+    padding: 9px 10px;
+    font-size: 10px;
+    transition: 0.3s;
+}
+
+.order:hover {
+    background: #201c18;
+    color: white;
+    border-color: #201c18;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #201c18;
+    color: white;
+}
+
+.about-image {
+    min-height: 300px;
+    background: url("https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1100&q=85") center/cover;
+}
+
+.about-content {
+    align-self: center;
+    padding: 60px 10%;
+}
+
+.about h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: clamp(30px, 3.5vw, 45px);
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.about-content > p:not(.small-title) {
+    font-size: 12px;
+    line-height: 2;
+    color: #c7bfb5;
+    margin-bottom: 25px;
+}
+
+.contact {
+    text-align: center;
+    padding: 85px 20px;
+    background: #eee5d9;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact > p:not(.small-title) {
+    color: #766b5f;
+    font-size: 12px;
+    margin-bottom: 27px;
+    line-height: 1.8;
+}
+
+footer {
+    background: #121217;
+    color: #eee5da;
+    text-align: center;
+    padding: 45px 20px 20px;
+}
+
+.footer-logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    letter-spacing: 5px;
+}
+
+.footer-logo span {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    margin-top: 6px;
+}
+
+footer > p {
+    color: #aaa095;
+    font-size: 10px;
+    margin-top: 17px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 27px 0;
+    font-size: 11px;
+}
+
+.footer-links a:hover {
+    color: #d9b894;
+}
+
+footer .copyright {
+    border-top: 1px solid #39342e;
+    padding-top: 20px;
+    font-size: 9px;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 0 4%;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .photo {
+        height: 260px;
+    }
+
+    .catalog {
+        padding: 65px 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: auto;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        width: 100%;
+        order: 3;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .header-btn {
+        padding: 10px 12px;
+    }
+
+    .hero {
+        min-height: 510px;
+        padding: 55px 7%;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 49px;
+    }
+
+    .advantages {
+        padding: 23px 3%;
+        gap: 5px;
+    }
+
+    .advantages h3 {
+        font-size: 10px;
+    }
+
+    .advantages p {
+        font-size: 9px;
+    }
+
+    .catalog > h2,
+    .contact h2 {
+        font-size: 31px;
+    }
+
+    .products {
+        gap: 11px;
+    }
+
+    .photo {
+        height: 190px;
+    }
+
+    .info {
+        padding: 12px 9px;
+    }
+
+    .info h3 {
+        font-size: 17px;
+    }
+
+    .notes {
+        font-size: 9px;
+    }
+
+    .price-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .order {
+        text-align: center;
+        width: 100%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        min-height: 280px;
+    }
+
+    .about-content {
+        padding: 45px 7%;
+    }
+
+    .about h2 {
+        font-size: 34px;
+    }
+
+    .contact {
+        padding: 65px 6%;
+    }
+
+    .footer-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
